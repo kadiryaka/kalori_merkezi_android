@@ -1,0 +1,439 @@
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/notFoundError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:background="#eee"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/error_view_cloud"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="8dp"
+                android:textSize="24dp"
+                android:textColor="#595959"
+                android:text="Oops"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="6dp"
+                android:textColor="#7c7c7c"
+                android:textSize="16dp"
+                android:text="Kayıt bulunamadı"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/contentArea"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+        android:id="@+id/mainContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Spinner
+            android:id="@+id/names"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:id="@+id/tarih"
+            android:padding="4px"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#72BFC3">
+
+            <TextView
+                android:id="@+id/tarihKey"
+                android:layout_marginLeft="12dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:text="Tarih"
+                android:layout_gravity="left"
+                android:textSize="24dp"/>
+
+            <TextView
+                android:id="@+id/tarihValue"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_gravity="right"
+                android:textSize="21dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/kilo"
+            android:padding="4px"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/kiloKey"
+                android:layout_marginLeft="12dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:text="Kilo"
+                android:layout_gravity="left"
+                android:textSize="24dp"/>
+
+            <TextView
+                android:id="@+id/kiloValue"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_gravity="right"
+                android:textSize="24dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/omuz"
+            android:padding="4px"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#72BFC3">
+
+            <TextView
+                android:id="@+id/omuzKey"
+                android:layout_marginLeft="12dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:text="Omuz"
+                android:layout_gravity="left"
+                android:textSize="24dp"/>
+
+            <TextView
+                android:id="@+id/omuzValue"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_gravity="right"
+                android:textSize="24dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sagPazu"
+            android:padding="4px"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/sagPazuKey"
+                android:layout_marginLeft="12dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:text="Sağ Pazu"
+                android:layout_gravity="left"
+                android:textSize="24dp"/>
+
+            <TextView
+                android:id="@+id/sagPazuValue"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_gravity="right"
+                android:textSize="24dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/solPazu"
+            android:padding="4px"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#72BFC3">
+
+            <TextView
+                android:id="@+id/solPazuKey"
+                android:layout_marginLeft="12dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:text="Sol Pazu"
+                android:layout_gravity="left"
+                android:textSize="24dp"/>
+
+            <TextView
+                android:id="@+id/solPazuValue"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_gravity="right"
+                android:textSize="24dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/gogus"
+            android:padding="4px"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/gogusKey"
+                android:layout_marginLeft="12dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:text="Göğüs"
+                android:layout_gravity="left"
+                android:textSize="24dp"/>
+
+            <TextView
+                android:id="@+id/gogusValue"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_gravity="right"
+                android:textSize="24dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/karin"
+            android:padding="4px"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#72BFC3">
+
+            <TextView
+                android:id="@+id/karinKey"
+                android:layout_marginLeft="12dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:text="Karın"
+                android:layout_gravity="left"
+                android:textSize="24dp"/>
+
+            <TextView
+                android:id="@+id/karinValue"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_gravity="right"
+                android:textSize="24dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bel"
+            android:padding="4px"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/belKey"
+                android:layout_marginLeft="12dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:text="Bel"
+                android:layout_gravity="left"
+                android:textSize="24dp"/>
+
+            <TextView
+                android:id="@+id/belValue"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_gravity="right"
+                android:textSize="24dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/kalca"
+            android:padding="4px"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#72BFC3">
+
+            <TextView
+                android:id="@+id/kalcaKey"
+                android:layout_marginLeft="12dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:text="Kalça"
+                android:layout_gravity="left"
+                android:textSize="24dp"/>
+
+            <TextView
+                android:id="@+id/kalcaValue"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_gravity="right"
+                android:textSize="24dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sagBacak"
+            android:padding="4px"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/sagBacakKey"
+                android:layout_marginLeft="12dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:text="Sağ Bacak"
+                android:layout_gravity="left"
+                android:textSize="24dp"/>
+
+            <TextView
+                android:id="@+id/sagBacakValue"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_gravity="right"
+                android:textSize="24dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/solBacak"
+            android:padding="4px"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#72BFC3">
+
+            <TextView
+                android:id="@+id/solBacakKey"
+                android:layout_marginLeft="12dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:text="Sol Bacak"
+                android:layout_gravity="left"
+                android:textSize="24dp"/>
+
+            <TextView
+                android:id="@+id/solBacakValue"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_gravity="right"
+                android:textSize="24dp"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/drawerPane"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start">
+
+        <RelativeLayout
+            android:id="@+id/profileBox"
+            android:layout_width="match_parent"
+            android:clickable="true"
+            android:layout_height="100dp"
+            android:background="#1abc9c"
+            android:padding="8dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/userName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="#fff"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginTop="4dp"
+                    android:text="Profile Gözat"
+                    android:textColor="#fff"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/navList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/profileBox"
+            android:background="#ffffffff"
+            android:choiceMode="singleChoice" />
+
+    </RelativeLayout>
+</android.support.v4.widget.DrawerLayout>

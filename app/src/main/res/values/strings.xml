@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Kalori Merkezi</string>
+    <string name="loginFormTitle">Kullanıcı Girişi</string>
+    <string name="loginUsernameTitle">kullanıcı adı/mail:</string>
+    <string name="loginUsernameInputHint">Kullanıcı Adı ya da Mail</string>
+    <string name="loginPasswordTitle">şifre:</string>
+    <string name="loginPasswordInputHint">Şifrenizi Giriniz</string>
+    <string name="loginButton">Giriş</string>
+    <string name="error">hata</string>
+    <string name="wrong_login">Lütfen bilgilerinizi kontrol ediniz!</string>
+    <string name="wrong_system">Sistemde sorun var, lütfen daha sonra tekrar deneyiniz :(</string>
+    <string name="title_activity_profile">Profil</string>
+    <string name="drawer_open">open</string>
+    <string name="drawer_close">close</string>
+    <string name="title_activity_measure">Ölçülerim</string>
+    <string name="title_activity_diet">Diyetlerim</string>
+    <string name="title_activity_exercise">Egzersiz Programı</string>
+    <string name="title_activity_new_excersize">Egzersiz Girişi</string>
+    <string name="title_activity_personal_excersize">Kişisel Egzersizler</string>
+
+</resources>
